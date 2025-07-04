@@ -1,67 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Privacy Policy – Oct Track</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    :root {
+      --navy: #181836;
+      --accent: #ff00cc;
+      --teal: #40ffe0;
+      --card-bg: rgba(255,255,255,0.08);
+      --card-border: linear-gradient(90deg, #ff00cc 0%, #40ffe0 100%);
+      --text-primary: #fff;
+      --text-secondary: #fff7;
+      --shadow: 0 4px 24px 0 rgba(255,0,204,0.10);
+      --radius: 22px;
+      --font-main: 'SF Pro Rounded', 'Segoe UI', 'Arial Rounded MT Bold', Arial, sans-serif;
+    }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      padding: 2em;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.6;
+      background: var(--navy);
+      color: var(--text-primary);
+      font-family: var(--font-main);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      max-width: 540px;
+      width: 100%;
+      margin: 32px 0 24px 0;
+      padding: 0 16px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 2px solid transparent;
+      background-clip: padding-box, border-box;
+      position: relative;
+      margin-bottom: 24px;
+      padding: 32px 24px 24px 24px;
+      border-image: var(--card-border) 1;
+      border-image-slice: 1;
     }
     h1 {
-      color: #0070f3;
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin: 0 0 8px 0;
+      background: linear-gradient(90deg, var(--accent), var(--teal), #ffb6e6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      letter-spacing: 1px;
     }
-    hr {
-      margin: 2em 0;
+    h2 {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-top: 24px;
+      margin-bottom: 8px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    p, li {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0 0 12px 0;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 0 0 16px 0;
+    }
+    .meta {
+      font-size: 0.98rem;
+      color: var(--teal);
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+    .contact {
+      margin-top: 18px;
+      font-size: 1.05rem;
+      color: var(--accent);
+      font-weight: 500;
+      word-break: break-all;
+    }
+    .logo-octtrack {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .logo-octtrack span {
+      font-size: 1.5rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, var(--accent), var(--teal), #ffb6e6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      letter-spacing: 1px;
+      margin-left: 8px;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 0 4vw; }
+      .card { padding: 22px 8vw 18px 8vw; }
+      h1 { font-size: 1.5rem; }
     }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy – Oct Track</h1>
-  <p><strong>Effective Date:</strong> 2 Jul 2025</p>
-  <p><strong>App Name:</strong> Oct Track</p>
-  <p><strong>Developer:</strong> TC LEE</p>
+  <div class="container">
+    <div class="card">
+      <div class="logo-octtrack">
+        <span>Oct Track</span>
+      </div>
+      <h1>Privacy Policy</h1>
+      <div class="meta">
+        <div><b>Effective Date:</b> 2 Jul 2025</div>
+        <div><b>Developer:</b> TC LEE</div>
+      </div>
 
-  <hr/>
+      <h2>1. Data Collection</h2>
+      <p>
+        This app uses Google AdMob SDK to display advertisements. AdMob may automatically collect certain device information, including but not limited to:
+      </p>
+      <ul>
+        <li>Device Identifier (e.g. IDFA)</li>
+        <li>Usage statistics</li>
+        <li>Crash data</li>
+        <li>Location (approximate, if allowed by the device settings)</li>
+      </ul>
+      <p>
+        The app does <b>not</b> collect personal data such as name, email, or login credentials.
+      </p>
 
-  <h2>1. Data Collection</h2>
-  <p>
-    This app uses Google AdMob SDK to display advertisements. AdMob may automatically collect certain device information, including but not limited to:
-  </p>
-  <ul>
-    <li>Device Identifier (e.g. IDFA)</li>
-    <li>Usage statistics</li>
-    <li>Crash data</li>
-    <li>Location (approximate, if allowed by the device settings)</li>
-  </ul>
-  <p>The app does not collect personal data such as name, email, or login credentials.</p>
+      <h2>2. Tracking</h2>
+      <p>
+        In compliance with Apple’s App Tracking Transparency (ATT) framework, the app will request your permission before using your device’s advertising identifier (IDFA) for personalized ads or tracking.
+      </p>
+      <p>
+        You can manage this preference in your iOS device settings.
+      </p>
 
-  <hr/>
+      <h2>3. Third-Party Services</h2>
+      <p>
+        This app uses the following third-party services:
+      </p>
+      <ul>
+        <li>Google AdMob</li>
+      </ul>
+      <p>
+        Please refer to their privacy policy for detailed information.
+      </p>
 
-  <h2>2. Tracking</h2>
-  <p>
-    In compliance with Apple’s App Tracking Transparency (ATT) framework, the app will request your permission before using your device’s advertising identifier (IDFA) for personalized ads or tracking.
-  </p>
-  <p>You can manage this preference in your iOS device settings.</p>
-
-  <hr/>
-
-  <h2>3. Third-Party Services</h2>
-  <p>This app uses the following third-party services:</p>
-  <ul>
-    <li>Google AdMob</li>
-  </ul>
-  <p>Please refer to their privacy policy for detailed information.</p>
-
-  <hr/>
-
-  <h2>4. Contact</h2>
-  <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-  <p>📧 <a href="mailto:tcvlee@me.com">tcvlee@me.com</a></p>
-
+      <h2>4. Contact</h2>
+      <p>
+        If you have any questions about this Privacy Policy, please contact us at:
+      </p>
+      <div class="contact">
+        📧 tcvlee@me.com
+      </div>
+    </div>
+  </div>
 </body>
 </html>
